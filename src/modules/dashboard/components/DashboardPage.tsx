@@ -18,12 +18,7 @@ export const DashboardPage = () => {
     <Main>
       <StatisticsCardListSection />
       <TwoColumnsLayout>
-        <TeacherCard
-          name={teacherCardMockData.name}
-          description={teacherCardMockData.description}
-          image={teacherCardMockData.image}
-          onContact={handleOnContact}
-        />
+        <TeacherCard {...teacherCardMockData} onContact={handleOnContact} />
         <GraphCard />
       </TwoColumnsLayout>
       <StudentsTableSection />
@@ -33,8 +28,12 @@ export const DashboardPage = () => {
 
 export const TwoColumnsLayout = styled("section", {
   paddingTop: "2rem",
-  display: "grid",
-  gridTemplateColumns: "2.6fr 1fr",
+  display: "flex",
+  "& > *": {
+    flex: 1,
+    flexBasis: "300px",
+  },
+  flexWrap: "wrap",
   gap: 20,
 });
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Button, Card, Text } from "modules/ui";
+import { Button, Card, Section, Text } from "modules/ui";
 import { styled } from "styles";
 
 interface TeacherCardTypeProps {
@@ -16,8 +16,7 @@ export const TeacherCard = ({
   image,
   onContact,
 }: TeacherCardTypeProps) => (
-  <section>
-    <Text as={"h3"}>Dnešní lektor</Text>
+  <Section header={<Text as={"h3"}>Dnešní lektor</Text>}>
     <CardStyled>
       <Image
         src={image}
@@ -32,12 +31,13 @@ export const TeacherCard = ({
         <ContactButton onClick={onContact}>Contact me</ContactButton>
       </TextBox>
     </CardStyled>
-  </section>
+  </Section>
 );
 
 const CardStyled = styled(Card, {
   display: "flex",
   gap: 20,
+  height: "100%",
 });
 
 const TextBox = styled("div", {

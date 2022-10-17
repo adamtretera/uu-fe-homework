@@ -6,12 +6,7 @@ import { StatisticsCard } from "./StatisticsCard";
 export const StatisticsCardListSection = () => (
   <Box>
     {dashboardMockData.map((statisticItem) => (
-      <StatisticsCard
-        key={statisticItem.title}
-        title={statisticItem.title}
-        value={statisticItem.value}
-        unit={statisticItem.unit}
-      />
+      <StatisticsCard key={statisticItem.title} {...statisticItem} />
     ))}
   </Box>
 );
@@ -19,6 +14,7 @@ export const StatisticsCardListSection = () => (
 export const Box = styled("section", {
   display: "flex",
   gap: 10,
+  flexWrap: "wrap",
 
   "& > *": {
     flexGrow: 1,

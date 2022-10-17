@@ -7,11 +7,11 @@ const TableStyled = styled("table", {
 });
 
 const Tr = styled("tr", {
-  borderBottom: "2px solid black",
+  borderBottom: "1px solid black",
 });
 
 const Td = styled("td", {
-  border: "2px solid black",
+  border: "1px solid black",
   padding: "1rem",
 
   height: "1rem",
@@ -21,7 +21,7 @@ const Th = styled("th", {
   padding: "1.2rem",
   backgroundColor: "$tableBackgroundColor",
   textAlign: "left",
-  border: "2px solid black",
+  border: "1px solid black",
 
   height: "1rem",
 });
