@@ -26,14 +26,14 @@ const Th = styled("th", {
   height: "1rem",
 });
 
-export type ColumnDefinitionType<K> = {
+export type ColumnDefinitionType<T, K extends keyof T> = {
   key: K;
   header: string;
 };
 
 type TableProps<T, K extends keyof T> = {
   data: Array<T>;
-  columns: Array<ColumnDefinitionType<K>>;
+  columns: Array<ColumnDefinitionType<T, K>>;
 };
 
 export const Table = <T, K extends keyof T>({
