@@ -26,14 +26,14 @@ const Th = styled("th", {
   height: "1rem",
 });
 
-export type ColumnDefinitionType<T, K extends keyof T> = {
+export type ColumnDefinitionType<K> = {
   key: K;
   header: string;
 };
 
 type TableProps<T, K extends keyof T> = {
   data: Array<T>;
-  columns: Array<ColumnDefinitionType<T, K>>;
+  columns: Array<ColumnDefinitionType<K>>;
 };
 
 export const Table = <T, K extends keyof T>({
@@ -43,11 +43,11 @@ export const Table = <T, K extends keyof T>({
   return (
     <TableStyled>
       <thead>
-        <tr>
+        <Tr>
           {columns.map((item) => (
             <Th key={`row-${item.key.toString()}`}>{item.header}</Th>
           ))}
-        </tr>
+        </Tr>
       </thead>
       <tbody>
         {data.map((row, index) => {
