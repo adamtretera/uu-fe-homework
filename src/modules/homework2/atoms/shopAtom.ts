@@ -10,7 +10,7 @@ const initData = [
   {
     name: "Hračky",
     count: 1,
-    maxCount: 100,
+    maxCount: 50,
   },
   {
     name: "Párfémy",
