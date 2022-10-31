@@ -15,5 +15,13 @@ export const Text = styled("p", {
         fontSize: "$3",
       },
     },
+    color: {
+      primary: {
+        color: "black",
+      },
+      danger: {
+        color: "red",
+      },
+    },
   },
 });

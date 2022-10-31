@@ -17,3 +17,7 @@ export const { styled, getCssText, globalCss } = createStitches({
     },
   },
 });
+
+export const globalStyles = globalCss({
+  body: { fontFamily: "$system" },
+});

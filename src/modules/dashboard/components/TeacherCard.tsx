@@ -18,13 +18,9 @@ export const TeacherCard = ({
 }: TeacherCardTypeProps) => (
   <Section header={<Text as={"h3"}>Dnešní lektor</Text>}>
     <CardStyled>
-      <Image
-        src={image}
-        objectFit={"cover"}
-        alt={name}
-        width={350}
-        height={450}
-      />
+      <ImageBox>
+        <ImageStyled src={image} alt={name} fill />
+      </ImageBox>
       <TextBox>
         <Text as={"h2"}>{name}</Text>
         <Text as={"p"}>{description}</Text>
@@ -45,6 +41,16 @@ const TextBox = styled("div", {
   flexDirection: "column",
   gap: 20,
   padding: "1rem",
+});
+
+const ImageBox = styled("div", {
+  position: "relative",
+  height: "100%",
+  width: "100%",
+});
+
+const ImageStyled = styled(Image, {
+  objectFit: "cover",
 });
 
 const ContactButton = styled(Button, {
