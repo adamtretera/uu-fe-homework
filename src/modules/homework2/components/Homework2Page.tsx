@@ -8,6 +8,7 @@ import { ShopCard } from "./ShopCard";
 import { ShopsCountCard } from "./ShopsCountCard";
 import { TimeCard } from "./TimeCard";
 import { AddShopForm } from "./AddShopForm";
+import { ShopsChart } from "./ShopsChart";
 
 export const Homework2Page = () => {
   const [shop] = useAtom(shopAtom);
@@ -20,6 +21,7 @@ export const Homework2Page = () => {
         return <ShopCard key={`${shopAtom}`} shopAtom={shopAtom} />;
       })}
       <AddShopForm />
+      <ShopsChart />
     </Layout>
   );
 };
