@@ -31,17 +31,33 @@ export function AddShopForm() {
   return (
     <div>
       <Form onSubmit={handleSubmit}>
-        <input name={"name"} />
-        <input type={"number"} name={"maxCount"} />
+        <Label>
+          Název
+          <input name={"name"} />
+        </Label>
+        <Label>
+          Maximální počet lidí:
+          <input type={"number"} name={"maxCount"} />
+        </Label>
         <Button type={"submit"}>Přidat obchod</Button>
       </Form>
     </div>
   );
 }
 
+// TODO: create individual components
+
 export const Form = styled("form", {
   display: "flex",
+  justifyContent: "end",
+
   padding: "2rem",
   gap: "1rem",
   border: "1px solid black",
+});
+
+export const Label = styled("label", {
+  display: "flex",
+  gap: "1rem",
+  alignItems: "center",
 });

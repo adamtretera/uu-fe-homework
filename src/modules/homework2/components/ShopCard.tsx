@@ -16,8 +16,10 @@ export const ShopCard = ({ shopAtom }: ShopCardTypesProps) => {
   const hoursNow = new Date().getHours();
   const isDayTime = hoursNow < 22 && hoursNow > 6;
 
+  const notEditable = !isMaxCount || isDayTime;
+
   const incrementCount = () => {
-    if (!isMaxCount && isDayTime) {
+    if (notEditable) {
       setShop((prev) => {
         return { ...prev, count: shop.count + 1 };
       });
@@ -33,7 +35,7 @@ export const ShopCard = ({ shopAtom }: ShopCardTypesProps) => {
         </Text>
         <Text>{shop.count}</Text>
       </Box>
-      <Button disabled={isMaxCount} onClick={incrementCount}>
+      <Button disabled={notEditable} onClick={incrementCount}>
         +1
       </Button>
     </ShopCardStyled>
