@@ -8,7 +8,7 @@ import { TeacherCard } from "./TeacherCard";
 import { StudentsTableSection } from "./StudentsTableSection";
 import { StatisticsCardListSection } from "./StatisticsCardListSection";
 
-export const DashboardPage = () => {
+export const Homework1Page = () => {
   // handles the button in teacher card
   const handleOnContact = () => {
     alert("Contact success");

@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import { DashboardPage } from "modules/dashboard";
+import { Homework3Page } from "modules/homework3";
 
 const Home: NextPage = () => {
-  return <DashboardPage />;
+  return <Homework3Page />;
 };
 
 export default Home;

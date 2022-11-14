@@ -19,11 +19,14 @@ export const Menu = () => {
       </Trigger>
 
       <DropdownMenuContent sideOffset={5}>
-        <MenuLink href={"/"}>
+        <MenuLink href={"/homework1"}>
           <MenuItem>Homework 1</MenuItem>
         </MenuLink>
         <MenuLink href={"/homework2"}>
           <MenuItem>Homework 2</MenuItem>
+        </MenuLink>
+        <MenuLink href={"/"}>
+          <MenuItem>Homework 3</MenuItem>
         </MenuLink>
       </DropdownMenuContent>
     </DropdownMenu>
