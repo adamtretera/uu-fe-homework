@@ -31,6 +31,9 @@ export const Menu = () => {
         <MenuLink href={"/homework4"}>
           <MenuItem>Homework 4</MenuItem>
         </MenuLink>
+        <MenuLink href={"/homework5"}>
+          <MenuItem>Homework 5</MenuItem>
+        </MenuLink>
       </DropdownMenuContent>
     </DropdownMenu>
   );

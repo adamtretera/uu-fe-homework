@@ -9,11 +9,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   globalStyles();
 
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </MantineProvider>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
 
