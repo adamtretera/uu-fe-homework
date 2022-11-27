@@ -28,6 +28,15 @@ export const FilterForm = ({ onClose }: { onClose: () => void }) => {
     else return [{ label: "Žadné jsme nenašli", value: "nic" }];
   };
 
+  const setOfBrands = new Set(carsData.map((item) => item.brand));
+
+  const brandsArray = [...setOfBrands];
+
+  const brandsForm = brandsArray.map((item) => ({
+    value: item,
+    label: item,
+  }));
+
   return (
     <Form
       onSubmit={form.onSubmit((values) => {
@@ -38,10 +47,7 @@ export const FilterForm = ({ onClose }: { onClose: () => void }) => {
       <Select
         label="Vyberte zančku"
         placeholder="Značka"
-        data={carsData.map((item) => ({
-          value: item.brand,
-          label: item.brand,
-        }))}
+        data={brandsForm}
         onChange={(value) => (value ? form.setValues({ brand: value }) : null)}
         {...form.getInputProps("brand")}
       />
