@@ -1,22 +1,12 @@
 import { styled } from "@stitches/react";
 import uuid from "react-uuid";
-
-import { CarCard } from "../CarCard/CarCard";
-
 import { useAtomValue } from "jotai";
+
+import { CarCard } from "../CarCard";
 import { filteredCarsData } from "../../atoms";
-import { faker } from "@faker-js/faker";
-import { generateMock } from "@anatine/zod-mock";
-import { CarSchema } from "../../validations";
 
 export const CarList = () => {
   const data = useAtomValue(filteredCarsData);
-  console.log(
-    faker.random
-      .alphaNumeric(100)
-      .split("")
-      .map(() => generateMock(CarSchema))
-  );
 
   return (
     <List>
