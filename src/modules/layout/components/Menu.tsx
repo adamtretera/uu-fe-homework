@@ -13,7 +13,7 @@ export const Menu = () => {
   return (
     <DropdownMenu>
       <Trigger asChild>
-        <IconButton aria-label="Customise options">
+        <IconButton aria-label="Menu">
           <HamburgerMenuIcon />
         </IconButton>
       </Trigger>
@@ -27,6 +27,9 @@ export const Menu = () => {
         </MenuLink>
         <MenuLink href={"/"}>
           <MenuItem>Homework 3</MenuItem>
+        </MenuLink>
+        <MenuLink href={"/homework4"}>
+          <MenuItem>Homework 4</MenuItem>
         </MenuLink>
       </DropdownMenuContent>
     </DropdownMenu>

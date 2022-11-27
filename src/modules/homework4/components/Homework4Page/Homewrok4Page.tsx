@@ -1,0 +1,43 @@
+import { CarList } from "../CarList";
+import { FilterCarFormModal } from "../FilterCarFormModal";
+import { Button, Flex } from "@mantine/core";
+import { styled } from "@stitches/react";
+import { useUpdateAtom } from "jotai/utils";
+import { filterDataAtom } from "../../atoms";
+
+export const Homework4Page = () => {
+  const setFilterData = useUpdateAtom(filterDataAtom);
+  return (
+    <Page>
+      <Flex mih={200} align={"center"} justify={"space-between"}>
+        <h1>Car list</h1>
+        <Flex gap={20}>
+          <Button
+            color="red"
+            onClick={() => {
+              setFilterData({
+                brand: "",
+                model: "",
+                drivenFrom: "",
+                drivenTo: "",
+                priceFrom: "",
+                priceTo: "",
+                fuel: "",
+              });
+            }}
+          >
+            Resetovat
+          </Button>
+          <FilterCarFormModal />
+        </Flex>
+      </Flex>
+      <CarList />
+    </Page>
+  );
+};
+
+const Page = styled("section", {
+  margin: "0 auto",
+
+  maxWidth: 1200,
+});
